@@ -23,7 +23,7 @@ func DefaultPostgresConfig() PostgresConfig {
 		User:     os.Getenv("POSTGRES_USER"),
 		Password: os.Getenv("POSTGRES_PASSWORD"),
 		Database: os.Getenv("POSTGRES_DATABASE"),
-		SSLMode:  "disable",
+		SSLMode:  os.Getenv("POSTGRES_SSLMODE"),
 	}
 }
 
